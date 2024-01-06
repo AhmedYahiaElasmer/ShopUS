@@ -3,9 +3,10 @@ let arr = [
   "./imgs/hero-slider-two.webp",
   "./imgs/hero-slider-three.webp",
 ];
+let count = 0;
 $(".swiper-pagination-bullet").on("click", function () {
-  console.log(this);
-
+  // console.log(this);
+  count = $(this).attr("tabindex");
   $(".swiper-pagination-bullet").removeClass("swiper");
   $(this).addClass("swiper");
   // console.log($(this).attr("tabindex"));
@@ -13,10 +14,12 @@ $(".swiper-pagination-bullet").on("click", function () {
     "background-image": `url(${arr[$(this).attr("tabindex")]}) `,
   });
 });
-let count = 0;
+// console.log($($(".swiper-pagination-bullet")[0]).attr("tabindex"));
+
 window.setInterval(() => {
-  count++;
+  // console.log($($(".swiper-pagination-bullet")[count]).attr("tabindex"));
   if (count == 3) {
+    // console.log($($(".swiper-pagination-bullet")[count]).attr("tabindex"));
     count = 0;
     $(".hero").css({
       "background-image": `url(${arr[count]}) `,
@@ -29,8 +32,8 @@ window.setInterval(() => {
   // console.log($(`.swiper-pagination-bullet[ tabindex=${count}]`));
   $($(`.swiper-pagination-bullet`)).removeClass("swiper");
   $($(`.swiper-pagination-bullet[ tabindex=${count}]`)).addClass("swiper");
-
   // console.log(count);
+  count++;
 }, 3000);
 // console.log($("#day"));
 let second = 60;
