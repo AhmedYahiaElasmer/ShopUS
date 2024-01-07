@@ -244,7 +244,8 @@ a {
   background: url(./imgs/style-bg-two.webp) no-repeat center/cover;
 }
 .product {
-  padding: 6rem 0;
+  padding: 4rem 0;
+  margin: 2rem;
 }
 .category-section .product-wrapper:hover {
   border: 1px solid #ae1c9a;
@@ -623,7 +624,7 @@ a {
   justify-content: center;
   gap: 1rem;
   width: 100%;
-  height: 17rem;
+  /* height: 17rem; */
   padding: 0 0 2rem;
   border-radius: 1.2rem;
   background-color: #fff;
@@ -645,14 +646,14 @@ a {
 @media only screen and (min-width: 767px) and (max-width: 1200px) {
   .best-selling-items {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 2rem;
   }
 }
 @media (max-width: 767px) {
   .best-selling-items {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
   }
 }
@@ -698,6 +699,10 @@ li {
 }
 .footer-section .footer-link ul li {
   margin-bottom: 1rem;
+}
+.footer-section .footer-link a:hover {
+  color: #ae1c9a !important;
+  text-decoration: underline;
 }
 .footer-section {
   padding-top: 2rem;
@@ -760,4 +765,7 @@ li {
   background: #fff;
   border: none;
   outline: none;
+}
+.product-details {
+  font-size: 0.9rem !important;
 }
